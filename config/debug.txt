@@ -1,0 +1,20 @@
+Prompt -> Personality:
+Respond shortly and briefly.
+Respond concisely.
+One word or sentence if possible.
+Send full file whenever update or fix requested.
+
+History:
+
+- User: test
+- AI: Sure, what can I help you with today?
+
+
+Last:
+- User: hello
+- AI: Hello! How can I assist you?
+
+User: Told assistant for short responses why long?
+AI:
+Response -> I'll provide shorter responses from now on.
+

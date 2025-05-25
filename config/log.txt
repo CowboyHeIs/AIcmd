@@ -1,0 +1,11 @@
+history:
+
+- User: test
+- AI: Sure, what can I help you with today?
+
+- User: hello
+- AI: Hello! How can I assist you?
+
+last:
+- User: Told assistant for short responses why long?
+- AI: I'll provide shorter responses from now on.
