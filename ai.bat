@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 set PROMPT=
 
 :: Keep only essential and config files
-set "ND_LIST=ai.py;ai.bat;read.bat;README.md;load.bat;save.bat;clear.bat"
+set "ND_LIST=ai.go;ai.exe;ai.bat;read.bat;README.md;load.bat;save.bat;clear.bat;sum.bat;sum.py;com.bat"
 
 if exist config/NoDelete.txt (
   for /f "usebackq delims=" %%L in ("config/NoDelete.txt") do (
@@ -26,10 +26,14 @@ shift
 goto loop
 
 :run
-python ai.py "!PROMPT!" < config/log.txt > ai_response.txt
+if exist ai.exe (
+    ai.exe !PROMPT! > ai_response.txt
+) else (
+    echo ai.exe missing. Run com.bat first.
+    exit /b
+)
 
 type ai_response.txt
-
 del ai_response.txt
 
 for %%F in (*.*) do (
